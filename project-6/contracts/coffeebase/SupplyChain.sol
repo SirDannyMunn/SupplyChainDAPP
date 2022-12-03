@@ -226,15 +226,19 @@ contract SupplyChain is Ownable {
         // Call modifier to check if upc has passed previous supply chain stage
     forSale(_upc)
         // Call modifer to check if buyer has paid enough
-    paidEnough(items[_upc].productPrice)
+    paidEnough(msg.value)
         // Call modifer to send any excess ether back to buyer
     checkValue(_upc)
     {
-
         // Update the appropriate fields - ownerID, distributorID, itemState
         items[_upc].ownerID = msg.sender;
+        items[_upc].distributorID = msg.sender;
+        items[_upc].itemState = State.Sold;
+
         // Transfer money to farmer
         items[_upc].originFarmerID.transfer(items[_upc].productPrice);
+        //items[_upc].transferOwnership(msg.sender);
+
         // emit the appropriate event
         emit Sold(_upc);
     }
@@ -262,6 +266,8 @@ contract SupplyChain is Ownable {
     {
         // Update the appropriate fields - ownerID, retailerID, itemState
         items[_upc].ownerID = msg.sender;
+        items[_upc].retailerID = msg.sender;
+        items[_upc].itemState = State.Received;
         // Emit the appropriate event
         emit Received(_upc);
     }
@@ -275,6 +281,8 @@ contract SupplyChain is Ownable {
     {
         // Update the appropriate fields - ownerID, consumerID, itemState
         items[_upc].ownerID = msg.sender;
+        items[_upc].consumerID = msg.sender;
+        items[_upc].itemState = State.Purchased;
         // Emit the appropriate event
         emit Purchased(_upc);
     }
@@ -339,7 +347,7 @@ contract SupplyChain is Ownable {
         distributorID = items[_upc].distributorID;
         retailerID = items[_upc].retailerID;
         consumerID = items[_upc].consumerID;
-        
+
 
         return
         (
