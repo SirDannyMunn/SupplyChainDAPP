@@ -1,23 +1,26 @@
 Running migration: 1_initial_migration.js
-  Deploying Migrations...
-  ... 0xb84a1aa313fbdbd70ec8e0dffa71aad844b32b596f7df2bf6e1c03f3dbe50f2a
-  Migrations: 0x695623aab40a17d9e6d8d5a7df8a9ef0f977e8c9
+  Replacing Migrations...
+  ... 0xcc85b65e4bc764ca12b4792bc72d52f17e522da14f56846dee593f29d5b7a77b
+  Migrations: 0x347789285e8d04f9fd10e8e81639dee674885877
 Saving successful migration to network...
-  ... 0x11a41b655090bbb7af99a4245314ee02bfcfc889b2d875fbba7af4101b039743
+  ... 0x3dd002c171e8429bbf85b72c6377ef79edbd86014fc4282a4e044c36d2a7550a
 Saving artifacts...
 Running migration: 2_deploy_contracts.js
   Deploying FarmerRole...
-  ... 0x46410e74ecba85c56810ac8366610c346145e2d0c77daee1719cc801ddca0f57
-  FarmerRole: 0x13d01faef1f557f32f25b83c64da29de9a84f639
+  ... 0x9d01ac1f9d8c6d7ce1d3757ad903caea494b618c015ee4a46d5e0726e55e71a6
+  FarmerRole: 0x90424abc80a69156ab00a67723b8dca840f01b4c
   Deploying DistributorRole...
-  ... 0x5e97ff996bedf6ea7d4d63f868434d90fb8ade94914aacdd00f710353dc17b07
-  DistributorRole: 0x27b33fe6ec437e375bda02f66b6c9d79a5258a32
+  ... 0x281fc215b216882bc389fba535cb31519ace538c312e823cfdd0ba477041abde
+  DistributorRole: 0x7ce59364aa7056934cf3f94dd0d14a1f0a55e4ba
   Deploying RetailerRole...
-  ... 0x957112726245f82f952d93c0cbe2c587941ff56ad473b76998f957c97deab68d
-  RetailerRole: 0x107526b0bfda9ae1524ac829873513cccf3b711c
+  ... 0x45e4277eee8078e0112abf8ab620ddf68f382cc353f2038332e1ba37fdf540b8
+  RetailerRole: 0x74f5528bc5418b77c9459ac46fba0489619cd3e7
   Deploying ConsumerRole...
-  ... 0x727ed6612812ade5986b99a5b8b872a95783cdadbc802b88f2b8baa1a446a442
-  ConsumerRole: 0x477b51981a769548c7a337e34bd01e9ce505af96
+  ... 0xf7d648d28f99ab09930b3b95c1c083d4a970bb64d7f710b5cf509cc76f5b9da9
+  ConsumerRole: 0x82483a254435828cef9180117cec6b6f546ab5ad
   Deploying SupplyChain...
-Error encountered, bailing. Network state unknown. Review successful transactions manually.
-insufficient funds for gas * price + value
+  ... 0x85c058c37fa1536e96087bc44255cfb1a6fdf38a4f028cf719b61331469ac5b7
+  SupplyChain: 0x2c5d34cc9ef1dde061e65a9cbce2a4aaeb55aa5c
+Saving successful migration to network...
+  ... 0xbc98a430639e59d8e7ab646245bb2f2df1b80760c0647b6a165635063ba72a2b
+Saving artifacts...

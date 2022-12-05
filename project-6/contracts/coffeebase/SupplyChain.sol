@@ -1,11 +1,14 @@
 pragma solidity ^0.4.24;
 
-import "../coffeeaccesscontrol/Roles.sol";
 import "../coffeecore/Ownable.sol";
+import "../coffeeaccesscontrol/ConsumerRole.sol";
+import "../coffeeaccesscontrol/DistributorRole.sol";
+import "../coffeeaccesscontrol/FarmerRole.sol";
+import "../coffeeaccesscontrol/RetailerRole.sol";
 
 
 // Define a contract 'Supplychain'
-contract SupplyChain is Ownable {
+contract SupplyChain is Ownable, ConsumerRole, RetailerRole, DistributorRole, FarmerRole {
 
     // Define 'owner'
 //    address owner;
