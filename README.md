@@ -2,6 +2,12 @@
 15.3.0
 
 
+# truffle version
+4.1.14
+
+# Solidity version
+0.4.24
+
 # Contract Address
 https://goerli.etherscan.io/address/0x2c5d34cc9ef1dde061e65a9cbce2a4aaeb55aa5c
 
